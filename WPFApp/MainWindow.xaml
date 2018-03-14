@@ -1,0 +1,23 @@
+﻿<Window x:Class="WPFApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" MaxWidth="400">
+            <TextBlock Text="Fixed Deposit Interest Calculator" HorizontalAlignment="Center" FontSize="25" />
+            <TextBlock Text="This app consume UWP App's AppService" HorizontalAlignment="Center" />
+            <TextBlock Text="Amount" Margin="0 20 0 0" />
+            <TextBox x:Name="txtAmount" InputScope="Number" HorizontalAlignment="Stretch" />
+            <TextBlock Text="Period (in year)" Margin="0 10 0 0" />
+            <TextBox x:Name="txtPeriod" InputScope="Number" HorizontalAlignment="Stretch" />
+            <TextBlock Text="Rate" Margin="0 10 0 0" />
+            <TextBox x:Name="txtRate" InputScope="Number" HorizontalAlignment="Stretch" />
+            <Button Content="Calculate Fixed Deposite Interest" HorizontalAlignment="Stretch" Margin="0 20 0 0" Click="Button_Click" />
+            <TextBlock x:Name="txtResponse" FontSize="20" Margin="0 30 0 0" FontWeight="Bold" />
+        </StackPanel>
+    </Grid>
+</Window>
