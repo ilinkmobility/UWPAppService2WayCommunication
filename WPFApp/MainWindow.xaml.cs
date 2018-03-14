@@ -26,6 +26,8 @@ namespace WPFApp
             InitializeComponent();
 
             WPFAppServiceHandler.StartWPFAppService(this);
+
+            WindowState = WindowState.Maximized;
         }
 
         public void OnBackgroundColorChange(string colorHex)

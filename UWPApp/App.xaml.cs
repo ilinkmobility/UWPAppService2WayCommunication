@@ -9,6 +9,7 @@ using Windows.ApplicationModel.AppService;
 using Windows.ApplicationModel.Background;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -104,6 +105,9 @@ namespace UWPApp
                     // parameter
                     rootFrame.Navigate(typeof(MainPage), e.Arguments);
                 }
+                ApplicationView.PreferredLaunchViewSize = new Size(1018, 754);
+                ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
+
                 // Ensure the current window is active
                 Window.Current.Activate();
             }
